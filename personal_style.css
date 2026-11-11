@@ -11,6 +11,8 @@ nav {
     border: 1px solid;
     width: 100%;
     color: black;
+    position: sticky;
+    top: 0px;
 }
 
 .left {
@@ -87,7 +89,7 @@ nav {
     color: white;
     width: 140px;
     height: 40px;
-    border-radius: 13px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,4 +104,94 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.products {
+    position: relative;   /* the missing line that broke your centering */
+}
+
+.pro-drop-down {
+    position: absolute;
+    top: 100%;
+    margin-top: 28px;     /* visual gap below the nav text */
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    width: 440px;
+    padding: 16px 12px;
+    background-color: #fff;
+    border: 1px solid #ECECEC;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    cursor: default;
+    z-index: 100;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+/* invisible bridge so the menu doesn't close while the mouse crosses the gap */
+.pro-drop-down::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 0;
+    width: 100%;
+    height: 28px;
+}
+
+.products:hover .pro-drop-down,
+.products:focus-within .pro-drop-down {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.object {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.object:hover {
+    background-color: #F9F9F9;
+}
+
+.object .icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background-color: #F5F5FF;
+    border-radius: 12px;
+}
+
+.object .icon img {
+    width: 22px;
+    height: 22px;
+}
+
+.object .text strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+}
+
+.object .text small {
+    display: block;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+}
+
+.make-payments .icon {
+    background-color: #1B1646;
 }
