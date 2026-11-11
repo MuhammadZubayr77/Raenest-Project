@@ -11,8 +11,9 @@ nav {
     border: 1px solid;
     width: 100%;
     color: black;
-    position: sticky;
-    top: 0px;
+    position: sticky !important;
+    top: 0px !important;
+    z-index: 1000;
 }
 
 .left {
@@ -55,7 +56,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
@@ -107,20 +108,20 @@ nav {
 }
 
 .products {
-    position: relative;   /* the missing line that broke your centering */
+    position: relative;
 }
 
 .pro-drop-down {
     position: absolute;
     top: 100%;
-    margin-top: 28px;     /* visual gap below the nav text */
+    margin-top: 28px;
     left: 50%;
     transform: translateX(-50%) translateY(8px);
-    width: 440px;
-    padding: 16px 12px;
+    width: 350px;
+    padding: 12px 10px;
     background-color: #fff;
     border: 1px solid #ECECEC;
-    border-radius: 24px;
+    border-radius: 18px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
     text-align: left;
     cursor: default;
@@ -131,7 +132,7 @@ nav {
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
-/* invisible bridge so the menu doesn't close while the mouse crosses the gap */
+
 .pro-drop-down::before {
     content: "";
     position: absolute;
@@ -151,9 +152,9 @@ nav {
 .object {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 10px 12px;
-    border-radius: 12px;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.15s ease;
 }
@@ -173,25 +174,117 @@ nav {
 }
 
 .object .icon img {
-    width: 22px;
-    height: 22px;
+    width: 17px;
+    height: 17px;
 }
 
 .object .text strong {
     display: block;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
     color: #111;
 }
 
 .object .text small {
     display: block;
-    margin-top: 2px;
-    font-size: 14px;
+    margin-top: 1px;
+    font-size: 12px;
     font-weight: 400;
     color: #777;
 }
 
 .make-payments .icon {
     background-color: #1B1646;
+}
+
+.earn {
+    position: relative;
+}
+
+.earn-drop-down {
+    position: absolute;
+    top: 100%;
+    margin-top: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    width: 350px;
+    padding: 12px 10px 40px;
+    background-color: #fff;
+    border: 1px solid #ECECEC;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    font-weight: 400;
+    cursor: default;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+
+.earn-drop-down::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 0;
+    width: 100%;
+    height: 28px;
+}
+
+
+.earn:hover .earn-drop-down,
+.earn:focus-within .earn-drop-down {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+.ref-2 {
+    margin-top: 16px;
+}
+
+.ref-2 .icon,
+.reward .icon {
+    background-color: #1B1646;
+}
+
+
+.earn-drop-down::after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 20px 10px 0;
+    background-color: gainsboro;
+}
+
+.image-container {
+    width: max-content;
+    animation: scrolling 10s linear infinite;
+}
+
+.image-container img {
+    display: block;
+    height: 60px;
+    width: 1300px;
+}
+
+.animation-container {
+    width: 650px;
+    margin-left: 80px;
+    margin-top: 50px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+@keyframes scrolling {
+    from { 
+            transform: translateX(0);
+         }
+
+    to   { 
+            transform: translateX(-50%);
+         }
 }
