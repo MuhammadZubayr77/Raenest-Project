@@ -1,3 +1,105 @@
 body {
    max-width: 100%; 
+   background-color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 90px;
+    border: 1px solid;
+    width: 100%;
+    color: black;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F9F9F9;
+    padding: 7px 15px;
+    border-radius: 25px;
+}
+
+.tab .personal {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab .business {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mid-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mid-2 .eng {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.create {
+    background-color: #4F3FD7;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    color: #8378E3;
+    border: 1px solid #8378E3;
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
