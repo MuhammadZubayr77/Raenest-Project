@@ -1,6 +1,7 @@
 body {
    max-width: 100%; 
    background-color: white;
+   box-sizing: border-box;
 }
 
 nav {
@@ -8,10 +9,11 @@ nav {
     align-items: center;
     justify-content: space-around;
     height: 90px;
-    border: 1px solid;
+    /* border: 1px solid; */
     width: 100%;
     color: black;
     position: sticky !important;
+    background-color: white;
     top: 0px !important;
     z-index: 1000;
 }
@@ -287,4 +289,193 @@ nav {
     to   { 
             transform: translateX(-50%);
          }
+}
+
+.hero {
+    background-color: #4F3FD7;
+    padding-top: 50px;
+    height: 920px;
+    background-image: url(./Pictures/hero_bg.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 75px; 
+}
+
+.left-item {
+    flex: 0 0 55%;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+}
+
+.recieve {
+    font-size: 80px;             
+    white-space: nowrap;        
+    letter-spacing: -0.04em; 
+}
+
+.right-item {
+    flex: 0 0 40%;
+}
+
+.right-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-next {
+    height: 800px;
+    background-color: white;
+}
+
+.backed {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    margin-top: 40px;
+}
+
+.image-flex img {
+    /* width: 80px; */
+}
+
+.image-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.over {
+    color: black;
+    font-size: 55px;
+    line-height: 65px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.hear {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.card-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 80px;
+}
+
+.card {
+    width: 350px;
+    height: 240px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #F8F8F8;
+}
+
+.middle-video {
+    width: 350px;
+    margin-top: 20px;
+    height: 500px;
+    border: none;
+    border-radius: 25px;
+    background-color: #F8F8F8;
+}
+
+.video-container {
+    width: 320px;
+    height: 470px;
+    border: none;
+    border-radius: 15px;
+    /* background-color: red; */
+    margin: auto;
+    margin-top: 20px;
+    background-image: url(./Pictures/video_image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mother {
+    position: relative;
+    z-index: 1001;
+}
+
+.mother > div {
+    position: sticky;
+    top: 0px;                      
+    width: 100%;
+    z-index: 1001;
+    height: 100vh;     
+    background-size: cover;
+    background-position: center;
+    margin-top: 500px;
+    margin-bottom: 60vh;
+}
+
+.child1 {
+    background-image: url(./Pictures/indian.png);
+}
+
+.child2 {
+    background-image: url(./Pictures/slide-2.png);
+}
+
+.child3 {
+    background-image: url(./Pictures/slide-3.jpg);
+}
+
+.child4 {
+    background-image: url(./Pictures/slide-4.png);
+}
+
+.child5 {
+    background-image: url(./Pictures/slide-5.png);
+    margin-bottom: 0;
+}
+
+.rec-money {
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 100px 60px;
+    padding-top: 30px;
+}
+
+.rec-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 250px;
+}
+
+.the-r {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.get-paid {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+}
+
+.learn-more {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
 }
